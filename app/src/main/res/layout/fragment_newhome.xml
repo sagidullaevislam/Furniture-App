@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/btn_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/ic_save"
+        app:layout_constraintEnd_toStartOf="@id/ic_save"
+        app:layout_constraintBottom_toBottomOf="@id/ic_save"/>
+
+    <ImageView
+        android:id="@+id/ic_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/ic_launcher_background"/>
+
+    <TextView
+        android:id="@+id/tv_newhome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/you_need"
+        app:layout_constraintTop_toTopOf="@id/btn_search"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/purple_700"
+        android:clickable="false"
+        android:layout_marginStart="15dp"
+        android:focusable="false"
+        android:padding="15dp"
+        android:fontFamily="sans-serif-condensed"
+        android:textSize="24sp"
+        android:layout_marginTop="40dp"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:textColor="@color/purple_700"
+        android:fontFamily="sans-serif-condensed"
+        android:layout_marginTop="20dp"
+        android:text="@string/to_explore_today"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@id/tv_newhome"
+        app:layout_constraintTop_toBottomOf="@id/tv_newhome" />
+
+    <TextView
+        android:id="@+id/tv_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:rotation="-90"
+        android:text="Item"
+        android:textColor="#595858"
+        app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/tv_newhome"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/tv_room"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rotation="-90"
+        android:layout_marginTop="54dp"
+        android:text="Room ideas"
+        android:textColor="@color/black"
+        android:textColorHint="@color/purple_700"
+        app:layout_constraintEnd_toEndOf="@+id/tv_item"
+        app:layout_constraintStart_toStartOf="@+id/tv_item"
+        app:layout_constraintTop_toBottomOf="@+id/tv_item" />
+</androidx.constraintlayout.widget.ConstraintLayout>
